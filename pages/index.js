@@ -11,6 +11,10 @@ export default function Home() {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta description="Get the daily in-game Fortnite News online" />
+        <meta
+          name="description"
+          content="Get the daily in-game Fortnite News online"
+        />
       </Head>
 
       <main>
