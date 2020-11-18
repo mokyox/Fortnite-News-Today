@@ -8,6 +8,9 @@ export default function Home() {
       <Head>
         <title>Fortnite News</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta description="Get the daily in-game Fortnite News online" />
       </Head>
 
       <main>
