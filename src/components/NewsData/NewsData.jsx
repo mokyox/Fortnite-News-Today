@@ -20,6 +20,7 @@ export const NewsData = () => {
   return (
     <Grid>
       {data.data.data.motds.map((element) => {
+        console.log(element);
         return (
           <div key={element.id}>
             <Image
@@ -29,7 +30,7 @@ export const NewsData = () => {
               loading="lazy"
               alt={`${element.id}`}
             />
-            <h3>{element.title}</h3>
+            <h2>{element.title}</h2>
             <p>{element.body}</p>
           </div>
         );

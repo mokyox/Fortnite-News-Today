@@ -134,6 +134,8 @@ export default function Home() {
       <style jsx global>{`
         html,
         body {
+          color: white;
+          background: #051221;
           padding: 0;
           margin: 0;
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,

@@ -14,7 +14,3 @@
   padding: 20px;
   margin: 0 auto;
 }
-
-.parent > h3 {
-  border: solid 1px red;
-}
