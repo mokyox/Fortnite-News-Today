@@ -14,13 +14,12 @@ export const NewsData = () => {
   }
 
   if (error) {
-    return <span>We hit an error.</span>;
+    return <span>Sorry, we hit an error.</span>;
   }
 
   return (
     <Grid>
       {data.data.data.motds.map((element) => {
-        console.log(element);
         return (
           <div key={element.id}>
             <Image
