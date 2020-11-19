@@ -77,11 +77,6 @@ export default function Home() {
           text-decoration: none;
         }
 
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
         .title a:hover,
         .title a:focus,
         .title a:active {
@@ -127,6 +122,9 @@ export default function Home() {
           .grid {
             width: 100%;
             flex-direction: column;
+          }
+          .title {
+            font-size: 2.25rem;
           }
         }
       `}</style>
