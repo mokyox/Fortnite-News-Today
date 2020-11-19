@@ -25,7 +25,7 @@ export const NewsData = () => {
             <Image
               src={`${element.tileImage}`}
               width={384}
-              height={216}
+              height={192}
               loading="lazy"
               alt={`${element.id}`}
             />
