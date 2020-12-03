@@ -2,7 +2,7 @@ import Head from "next/head";
 import { NewsData } from "../src/components/NewsData/NewsData";
 import { displayDate } from "../src/utils/utils";
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <div className="container">
       <Head>
@@ -10,7 +10,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta description="Get the daily in-game Fortnite News online" />
         <meta
           name="description"
           content="Get the daily in-game Fortnite News online"
@@ -18,7 +17,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className="title">Today's Fortnite News</h1>
+        <h1 className="title">Today&apos;s Fortnite News</h1>
         <p className="description">{displayDate()}</p>
         <NewsData />
       </main>
@@ -147,4 +146,6 @@ export default function Home() {
       `}</style>
     </div>
   );
-}
+};
+
+export default Home;

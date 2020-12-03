@@ -3,8 +3,9 @@ import axios from "axios";
 import { useQuery } from "react-query";
 import { Grid } from "../Grid/Grid";
 import { Spinner } from "../Icons/Spinner";
+import { NewsDataProps } from "./types";
 
-export const NewsData = () => {
+export const NewsData: React.FC = () => {
   const { isLoading, data, error } = useQuery("news", () =>
     axios("https://fortnite-api.com/v2/news/br")
   );
@@ -17,9 +18,20 @@ export const NewsData = () => {
     return <span>Sorry, we hit an error.</span>;
   }
 
+  if (data?.data.data.motds === null) {
+    return (
+      <h2>
+        Sorry, there is no news at the moment.{" "}
+        <span role="img" aria-label="crying face">
+          😢
+        </span>
+      </h2>
+    );
+  }
+
   return (
     <Grid>
-      {data.data.data.motds.map((element) => {
+      {data?.data.data.motds.map((element: NewsDataProps) => {
         return (
           <div key={element.id}>
             <Image

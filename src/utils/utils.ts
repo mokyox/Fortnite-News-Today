@@ -1,4 +1,4 @@
-export const displayDate = () => {
+export const displayDate = (): string => {
   const options = {
     weekday: "long",
     year: "numeric",
