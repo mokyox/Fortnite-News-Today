@@ -28,22 +28,9 @@
       }
     ]
   },
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly",
-    "React": "writable"
-  },
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 11,
-    "sourceType": "module"
-  },
   "settings": {
     "react": {
       "version": "detect"
     }
-  },
-  "plugins": ["react"]
+  }
 }
