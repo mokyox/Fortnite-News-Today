@@ -1,6 +1,3 @@
 export interface NewsDataProps {
-  id: string;
-  tileImage: string;
-  title: string;
-  body: string;
+  data: Array<{ id: string; tileImage: string; title: string; body: string }>;
 }

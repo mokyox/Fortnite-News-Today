@@ -1,8 +1,15 @@
 import Head from "next/head";
+import axios from "axios";
 import { NewsData } from "../src/components/NewsData/NewsData";
 import { displayDate } from "../src/utils/utils";
+import { Spinner } from "../src/components/Icons/Spinner";
+import { useQuery } from "react-query";
 
 const Home: React.FC = () => {
+  const { isLoading, data, error } = useQuery("news", () =>
+    axios("https://fortnite-api.com/v2/news/br")
+  );
+
   return (
     <div className="container">
       <Head>
@@ -19,7 +26,17 @@ const Home: React.FC = () => {
       <main>
         <h1 className="title">Today&apos;s Fortnite News</h1>
         <p className="description">{displayDate()}</p>
-        <NewsData />
+        {isLoading && <Spinner />}
+        {error && <span>Sorry, we hit an error.</span>}
+        {data?.data.data.motds === null && (
+          <h2>
+            Sorry, there is no news at the moment.{" "}
+            <span role="img" aria-label="crying face">
+              😢
+            </span>
+          </h2>
+        )}
+        <NewsData data={data?.data.data.motds} />
       </main>
 
       <footer>
