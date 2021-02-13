@@ -2,15 +2,16 @@
   display: flex;
   flex-direction: column;
   max-width: 600px;
-  padding: 0;
-  margin: 0;
   text-align: center;
 }
 
-.parent > * {
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  margin: 0 auto;
+@media (min-width: 600px) {
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 30px;
+    grid-row-gap: 10px;
+    max-width: 768px;
+    padding: 0 0.5rem;
+  }
 }
