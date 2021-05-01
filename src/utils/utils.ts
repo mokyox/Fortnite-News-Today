@@ -4,6 +4,7 @@ export const displayDate = (): string => {
     year: "numeric",
     month: "long",
     day: "numeric",
-  };
+  } as const;
+
   return new Date().toLocaleDateString("en-UK", options);
 };
