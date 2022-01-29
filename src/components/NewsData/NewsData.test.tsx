@@ -1,7 +1,12 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React from "react";
 import { NewsData } from "./NewsData";
 
 import { render, screen } from "@testing-library/react";
+
 import "@testing-library/jest-dom/extend-expect";
 
 test("renders a <Card/> correctly with given props", () => {
@@ -13,8 +18,7 @@ test("renders a <Card/> correctly with given props", () => {
       id: "Exotic Weapons",
       title: "Exotic Weapons",
       tabTitle: null,
-      body:
-        "Got Bars? Some of the Island's Characters have exotic weapons that they'll part with only for a hefty price. Track them down and try one out today!",
+      body: "Got Bars? Some of the Island's Characters have exotic weapons that they'll part with only for a hefty price. Track them down and try one out today!",
       image: image,
       tileImage: image,
       sortingPriority: 10,
