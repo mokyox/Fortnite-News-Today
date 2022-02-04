@@ -1,4 +1,4 @@
-export const Spinner: React.FC = () => {
+export const Spinner = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

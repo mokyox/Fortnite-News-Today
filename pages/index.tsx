@@ -5,7 +5,7 @@ import { displayDate } from "../src/utils/utils";
 import { Spinner } from "../src/components/Icons/Spinner";
 import { useQuery } from "react-query";
 
-const Home: React.FC = () => {
+const Home = () => {
   const { isLoading, data, error } = useQuery("news", () =>
     axios("https://fortnite-api.com/v2/news/br")
   );

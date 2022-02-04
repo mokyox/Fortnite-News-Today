@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Grid } from "../Grid/Grid";
 import { NewsDataProps } from "./types";
 
-export const NewsData: React.FC<NewsDataProps> = ({ data }) => {
+export const NewsData = ({ data }: NewsDataProps) => {
   return (
     <Grid>
       {data?.map((element) => {
