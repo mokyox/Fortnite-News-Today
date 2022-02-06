@@ -1,13 +1,7 @@
-/**
- * @jest-environment jsdom
- */
-
 import React from "react";
 import { NewsData } from "./NewsData";
 
 import { render, screen } from "@testing-library/react";
-
-import "@testing-library/jest-dom/extend-expect";
 
 test("renders a <Card/> correctly with given props", () => {
   const image =
